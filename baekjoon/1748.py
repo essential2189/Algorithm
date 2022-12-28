@@ -1,16 +1,18 @@
 def solution(N):
-    answer = 0
+    if N == 1:
+        return 1
 
-    l = len(str(N))
+    elif N == 2:
+        return 2
 
-    for i in range(l-1):
-        answer += 9 * (10 ** i) * (i + 1)
-        i += 1
+    elif N == 3:
+        return 4
 
-    answer += ((N - 10 ** (l-1)) + 1) * l
-
-    print(answer)
+    else:
+        return solution(N-1) + solution(N-2) + solution(N-3)
 
 
-solution(int(input()))
+T = int(input())
+for _ in range(T):
+    print(solution(int(input())))
 
