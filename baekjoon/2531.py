@@ -4,7 +4,7 @@ items = []
 for _ in range(belt):
     items.append(int(input()))
 
-items += items
+items += items[:K-1]
 max_len = 0
 for i in range(len(items)-K+1):
     set_ = set()
@@ -12,7 +12,5 @@ for i in range(len(items)-K+1):
         set_.add(items[j])
 
     set_.add(coupon)
-    if len(set_) > max_len:
-        max_len = len(set_)
-
+    max_len = max(max_len, len(set_))
 print(max_len)
