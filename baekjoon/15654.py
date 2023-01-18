@@ -6,6 +6,9 @@ nums.sort()
 s = []
 
 def backtracking(depth):
+    # if len(s) == M:
+    #     print(" ".join(map(str, s)))
+    #     return
     if depth == M:
         print(" ".join(map(str, s)))
         return
