@@ -12,8 +12,10 @@ for c in country_list:
 
 country_dict = sorted(country_dict.items(), key=lambda item: list(item[0]), reverse=True)
 
-for idx, cd in enumerate(country_dict):
-    for country in cd[1]:
-        if country == K:
-            print(idx+1)
-            break
+def solution():
+    for idx, cd in enumerate(country_dict):
+        for country in cd[1]:
+            if country == K:
+                return idx+1
+
+print(solution())
