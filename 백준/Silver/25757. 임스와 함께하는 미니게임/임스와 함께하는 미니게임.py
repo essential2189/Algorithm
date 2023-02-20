@@ -1,5 +1,3 @@
-import math
-
 def solution(person, game):
     if game == "Y":
         return len(person)
