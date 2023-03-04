@@ -9,8 +9,6 @@ sum_money = sum(money)
 if sum_money <= m:
     print(max(money))
 else:
-    check = [0 for _ in range(n)]
-
     limit = math.ceil(m / n)
 
     while True:
