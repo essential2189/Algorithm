@@ -1,6 +1,5 @@
 def solution(citations):
-    citations = sorted(citations)
-    h = citations[-1]
+    h = max(citations)
 
     while True:
         count = 0
