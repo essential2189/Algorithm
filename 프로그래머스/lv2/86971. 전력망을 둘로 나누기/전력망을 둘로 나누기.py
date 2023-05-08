@@ -46,7 +46,3 @@ def solution(n, wires):
             answer = abs(left_count - right_count)
         
     return answer
-        
-        
-                
-    return answer
