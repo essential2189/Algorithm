@@ -1,4 +1,4 @@
-def solution(N, K, times, grades):
+def solution(N, K, time, important):
     dp = [[0] * (n + 1) for _ in range(k + 1)]
 
     for lecture_num in range(1, k+1):
@@ -7,7 +7,7 @@ def solution(N, K, times, grades):
                 dp[lecture_num][now_time] = dp[lecture_num-1][now_time]
             else:
                 dp[lecture_num][now_time] = max(important[lecture_num-1] + dp[lecture_num-1][now_time - time[lecture_num-1]], dp[lecture_num-1][now_time])
-                
+
     return dp[K][N]
 
 n, k = map(int,input().split())
