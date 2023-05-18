@@ -1,5 +1,18 @@
 # https://velog.io/@gkscodus11/%EB%B0%B1%EC%A4%80-17208-%EC%B9%B4%EC%9A%B0%EB%B2%84%EA%B1%B0-%EC%95%8C%EB%B0%94%EC%83%9D
 
+# 완전 탐색
+# def knapsack(idx, burger, fry):
+#     if idx == n:
+#       return 0
+#     ret = 0
+#
+#     if burger >= order[idx][0] and fry >= order[idx][1]:
+#         ret = 1 + knapsack(idx + 1, burger - order[idx][0], fry - order[idx][1])
+#
+#     ret = max(ret, knapsack(idx + 1,burger, fry))
+#
+#     return ret
+
 def knapsack(idx, burger, fry):
     if idx == n:    # 더 이상 주문이 없음
         return 0
