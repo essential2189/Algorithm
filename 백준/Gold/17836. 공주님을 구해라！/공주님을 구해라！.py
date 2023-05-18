@@ -9,11 +9,12 @@ def solution(n, m, t, board):
 
     while q:
         y, x, time = q.popleft()
-        if y == n-1 and x == m-1:
+        
+        if y == n-1 and x == m-1:       # 공주한테 도착
             answer = min(answer, time)
             break
 
-        if time + 1 > t:
+        if time + 1 > t:    # 제한 시간 초과
             break
 
         for dx, dy in dir:
