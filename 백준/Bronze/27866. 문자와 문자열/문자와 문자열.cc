@@ -1,22 +1,21 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <string>
 #include <sstream>
-#include <cmath>
-#include <set>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
-  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
   string str;
+  int i;
 
   getline(cin, str);
-  
-  int i;
+
   cin >> i;
+
+  vector<char> v(str.begin(), str.end());
   
-  cout << str.at(i-1);
+  cout << v[i-1];
+
 }
